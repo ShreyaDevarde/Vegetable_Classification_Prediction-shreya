@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GreenClassify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>GreenClassify.com</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/prediction">Prediction</a>
+        <a href="/logout">Logout</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Vegetable Image Classification</h2>
+    <p>Upload an image and classify your vegetable instantly!</p>
+    <a href="/prediction" class="btn">Start Prediction</a>
+</section>
+
+</body>
+</html>

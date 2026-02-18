@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Vegetable Classification</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/logout">Logout</a>
+    </nav>
+</header>
+
+<div class="container">
+    <form action="/result" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if pred %}
+        <h2>Vegetable is {{ pred }}</h2>
+        <img src="{{ img_path }}" width="200">
+    {% endif %}
+</div>
+
+</body>
+</html>
