@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Logout</title>
+    <title>Result</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
 <header>
-    <h1>Thank You!</h1>
+    <h1>Vegetable classification</h1>
 </header>
 
-<div class="container">
-    <h2>You have successfully logged out.</h2>
-    <a href="/" class="btn">Return to Home</a>
+<div class="main-container">
+
+    {% if image_path %}
+        <img src="{{ image_path }}" class="result-image">
+    {% endif %}
+
+    <h2>Vegetable is {{ pred }}</h2>
+
 </div>
 
 </body>

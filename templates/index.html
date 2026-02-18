@@ -5,20 +5,59 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+<script>
+async function startCamera() {
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+            video: { width: 300, height: 225 }
+        });
 
+        const video = document.getElementById("video");
+        video.srcObject = stream;
+        video.play();
+
+    } catch (err) {
+        console.error("Camera error:", err);
+        alert("Camera not working: " + err.message);
+    }
+}
+
+startCamera();
+</script>
+
+
+<!-- NAVBAR -->
 <header>
-    <h1>GreenClassify.com</h1>
+    <div class="logo">GreenClassify.com</div>
     <nav>
         <a href="/">Home</a>
+        <a href="#about">About</a>
         <a href="/prediction">Prediction</a>
-        <a href="/logout">Logout</a>
     </nav>
 </header>
 
+<!-- HERO SECTION -->
 <section class="hero">
-    <h2>Vegetable Image Classification</h2>
-    <p>Upload an image and classify your vegetable instantly!</p>
-    <a href="/prediction" class="btn">Start Prediction</a>
+    <div class="hero-text">
+        <h1>Vegetable Image<br>Classification</h1>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="about">
+    <h2>ABOUT US</h2>
+    <p>
+        GreenClassify is a specialized platform solely focused on the task of vegetable image classification.
+        We utilize advanced machine learning algorithms and maintain a vast database to provide precise and
+        dependable classification results for a wide variety of vegetables.
+
+        Our aim is to simplify the process of identifying vegetables by leveraging the power of image
+        recognition technology. Whether you are a chef, a nutritionist, or a vegetable enthusiast,
+        GreenClassify is your go-to resource for accurately categorizing vegetables and expanding your
+        understanding of their diverse characteristics.
+    </p>
+
+    <h3>CONTACT US</h3>
 </section>
 
 </body>
