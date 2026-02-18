@@ -94,7 +94,7 @@ If confidence is below threshold:
 - CSS
 
 ---
-
+## Take the model best_model.keras from this link- https://drive.google.com/file/d/1FXQxAqqrXBitP5gsGF7i2gk589BR7lvT/view?usp=sharing.
 ## 🚀 How to Run the Project
 
 ### 1. Clone the Repository
