@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
 <header>
     <div class="logo">Vegetable classification</div>
     <nav>
@@ -21,13 +20,6 @@
         <br>
         <button type="submit" class="submit-btn">Submit</button>
     </form>
-    <h3>Capture Live Image</h3>
-
-    <video id="video" width="300" height="225" autoplay></video>
-    <button type="button" onclick="capture()">Capture</button>
-    <canvas id="canvas" width="300" height="225" style="display:none;"></canvas>
-    <input type="hidden" name="captured_image" id="captured_image">
-
     {% if pred %}
         <h2>Vegetable is {{ pred }}</h2>
     {% endif %}
